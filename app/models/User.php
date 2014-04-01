@@ -36,6 +36,16 @@ class User extends Ardent implements UserInterface, RemindableInterface {
 		'password_confirmation' => 'required|alpha_num|min:8',
 	);
 
+	/** 
+	 * Factory
+	 */
+	public static $factory = array(
+		'username' => 'string',
+		'email' => 'email',
+		'password' => 'password',
+		'password_confirmation' => 'password',
+	);
+
 	/**
 	 * Purge confirmation fields
 	 */

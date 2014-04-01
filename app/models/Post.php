@@ -15,6 +15,14 @@ class Post extends Ardent {
 		'user_id' => 'required',
 		'body' => 'required'
 	);
+
+	/**
+	 * Factory
+	 */
+	public static $factory = array(
+		'user_id' => 'factory|User',
+		'body' => 'text'
+	);
  
 	public function user()
 	{
